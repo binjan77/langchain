@@ -1,0 +1,7 @@
+# ignore file and folder list
+/.ven
+/backup
+/data
+/vector_store
+/sample_doc
+*.txt
