@@ -77,8 +77,10 @@ def get_vector_db(store_name):
 def search_similarities(search):
     # store name from session state
     store_name=st.session_state.store_name
-    # get vector_db
-    vector_db=get_vector_db(store_name)
+    # store name found 
+    if store_name:
+        # get vector_db
+        vector_db=get_vector_db(store_name)
     
     # if query has value and 
     if search and vector_db:
@@ -140,6 +142,7 @@ def main():
       if upload_file(pdf):
         # get chunks from uploaded file
         chunks=read_and_textify_pdf(pdf)
+        st.write(chunks)
         # vector store name
         store_name=f"{pdf.name[:-4]}.faiss"
         # save vectore store name in session state 

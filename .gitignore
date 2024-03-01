@@ -1,7 +1,11 @@
 # ignore file and folder list
-/.ven
-/backup
+/.venv
 /data
-/vector_store
+/mariela
+/md_vect_embedding
+/pdf_vect_embedding
 /sample_doc
+/sample_streamlit
+/vector_store
 *.txt
+.env
